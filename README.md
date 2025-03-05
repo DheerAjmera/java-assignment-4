@@ -1,10 +1,10 @@
 # java-assignment-4
 
-#Overview
+# Overview
 
 This Java program simulates a deck of 52 playing cards, allowing various operations such as shuffling, dealing cards, searching for specific cards, and displaying cards based on suits or ranks.
 
-##Features
+## Features
 
 1) Create a deck of 52 standard playing cards
 
@@ -22,7 +22,7 @@ This Java program simulates a deck of 52 playing cards, allowing various operati
 
 8) Display all cards of a given rank
 
-##Class Descriptions
+## Class Descriptions
 
 a) Card
 
