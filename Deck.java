@@ -34,3 +34,13 @@ class Deck {
         Collections.shuffle(deck);
         System.out.println("Deck has been shuffled.");
     }
+
+    // Prints all cards of a specific suit
+    public void sameCard(String suit) {
+        System.out.println("Cards of suit " + suit + ":");
+        for (Card card : deck) {
+            if (card.getSuit().equalsIgnoreCase(suit)) {
+                System.out.println(card);
+            }
+        }
+    }
