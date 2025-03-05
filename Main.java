@@ -21,3 +21,55 @@ public class Main {
             System.out.println("8. Distribute Cards to 3 Players");
             System.out.println("9. Exit");
             System.out.print("Enter your choice: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            switch (choice) {
+                case 1:
+                    deck.printDeck();
+                    break;
+                case 2:
+                    deck.shuffleDeck();
+                    break;
+                case 3:
+                    deck.dealCard();
+                    break;
+                case 4:
+                    System.out.print("Enter Rank: ");
+                    String rank = scanner.nextLine();
+                    System.out.print("Enter Suit: ");
+                    String suit = scanner.nextLine();
+                    boolean found = deck.findCard(rank, suit);
+                    if (found) {
+                        System.out.println("Card is in the deck.");
+                    } else {
+                        System.out.println("Card is not in the deck.");
+                    }
+                    break;
+                case 5:
+                    System.out.print("Enter Suit: ");
+                    String suitSearch = scanner.nextLine();
+                    deck.sameCard(suitSearch);
+                    break;
+                case 6:
+                    System.out.print("Enter Rank: ");
+                    String rankSearch = scanner.nextLine();
+                    deck.compareCard(rankSearch);
+                    break;
+                case 7:
+                    deck.randomCards();
+                    break;
+                case 8:
+                    deck.cardPlayers();
+                    break;
+                case 9:
+                    System.out.println("Exiting program.");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Invalid choice! Please enter a valid option.");
+            }
+        }
+    }
+}
