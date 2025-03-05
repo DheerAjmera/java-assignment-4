@@ -21,6 +21,11 @@ class Deck {
         }
     }
 
+    // Prints a single card
+    public void printCard(Card card) {
+        System.out.println(card);
+    }
+
     // Prints all cards in the deck
     public void printDeck() {
         for (Card card : deck) {
