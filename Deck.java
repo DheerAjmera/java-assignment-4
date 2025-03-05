@@ -34,7 +34,6 @@ class Deck {
         Collections.shuffle(deck);
         System.out.println("Deck has been shuffled.");
     }
-
     // Prints all cards of a specific suit
     public void sameCard(String suit) {
         System.out.println("Cards of suit " + suit + ":");
@@ -44,7 +43,6 @@ class Deck {
             }
         }
     }
-
     // Prints all cards of a specific rank
     public void compareCard(String rank) {
         System.out.println("Cards with rank " + rank + ":");
@@ -54,7 +52,6 @@ class Deck {
             }
         }
     }
-
     // Searches for a specific card in the deck
     public boolean findCard(String rank, String suit) {
         for (Card card : deck) {
@@ -64,7 +61,6 @@ class Deck {
         }
         return false;
     }
-
     // Deals 5 random cards
     public void dealCard() {
         shuffleDeck();
@@ -73,10 +69,24 @@ class Deck {
             System.out.println(deck.remove(0));
         }
     }
-
     // Prints 2 random cards from the deck
     public void randomCards() {
         shuffleDeck();
         System.out.println("Random Card 1: " + deck.get(0));
         System.out.println("Random Card 2: " + deck.get(1));
     }
+    // Distributes 5 cards to 3 players
+    public void cardPlayers() {
+        if (deck.size() < 15) {
+            System.out.println("Not enough cards to deal to players.");
+            return;
+        }
+        for (int i = 1; i <= 3; i++) {
+            System.out.println("Player " + i + "'s cards:");
+            for (int j = 0; j < 5; j++) {
+                System.out.println(deck.remove(0));
+            }
+            System.out.println();
+        }
+    }
+}
